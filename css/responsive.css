@@ -838,10 +838,57 @@ img {
     gap: 24px !important;
   }
 
+  .nav-cta {
+    display: none;
+  }
+
   /* Ensure all text is horizontal */
   * {
     writing-mode: horizontal-tb !important;
     text-orientation: mixed !important;
+  }
+
+  .hero {
+    text-align: center !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-content {
+    margin: 0 auto !important;
+    text-align: center !important;
+  }
+
+  .hero h1 {
+    text-align: center !important;
+    width: 100%;
+  }
+
+  .hero h2 {
+    text-align: center !important;
+    width: 100%;
+  }
+
+  .hero-countdown {
+    text-align: center !important;
+    width: 100%;
+  }
+
+  .hero-countdown span {
+    display: block !important;
+    text-align: center !important;
+  }
+
+  .hero-cta {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100%;
+  }
+
+  .hero-visual {
+    display: none !important;
   }
 }
 
