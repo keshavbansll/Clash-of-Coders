@@ -777,3 +777,115 @@ img {
     width: 100% !important;
   }
 }
+
+/* ===============================
+   TABLET/DESKTOP MODE FIX (764px - 1024px)
+================================ */
+
+@media (min-width: 764px) and (max-width: 1024px) {
+  /* Fix vertical text issue in journey cards */
+  .journey-card h4,
+  .journey-card p,
+  .journey-intro h3,
+  .journey-intro p {
+    writing-mode: horizontal-tb !important;
+    text-orientation: mixed !important;
+    word-wrap: break-word !important;
+  }
+
+  /* Journey section specific fixes */
+  .journey-panel {
+    padding: 64px 40px !important;
+  }
+
+  .journey-layout {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+  }
+
+  .journey-rows {
+    gap: 40px !important;
+  }
+
+  .journey-row {
+    grid-template-columns: 40px 1fr !important;
+    gap: 16px !important;
+  }
+
+  .journey-connector {
+    display: none !important;
+  }
+
+  .journey-card {
+    min-width: 0 !important;
+    width: 100% !important;
+  }
+
+  /* Participation grid fix */
+  .participation-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 24px !important;
+  }
+
+  /* Prizes grid fix */
+  .prizes-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /* Themes grid fix */
+  .themes-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 24px !important;
+  }
+
+  /* Ensure all text is horizontal */
+  * {
+    writing-mode: horizontal-tb !important;
+    text-orientation: mixed !important;
+  }
+}
+
+/* ===============================
+   FAQ READABILITY FIX - ALL SCREENS
+================================ */
+
+.faq-answer {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.faq-answer p {
+  padding: 16px 0 24px 0 !important;
+  margin: 0 !important;
+  line-height: 1.8 !important;
+  color: rgba(255, 255, 255, 0.8) !important;
+  font-size: 15px !important;
+  text-align: left !important;
+  max-width: 100% !important;
+}
+
+/* Active state with better spacing */
+.faq-item.active .faq-answer {
+  max-height: 500px !important;
+  padding-top: 0 !important;
+}
+
+.faq-question {
+  padding: 24px 0 !important;
+}
+
+/* Better FAQ list spacing */
+.faq-list {
+  padding: 0 1rem !important;
+}
+
+@media (min-width: 768px) {
+  .faq-list {
+    padding: 0 2rem !important;
+  }
+
+  .faq-answer p {
+    font-size: 16px !important;
+    padding: 20px 0 28px 0 !important;
+  }
+}

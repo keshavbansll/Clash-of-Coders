@@ -1,7 +1,3 @@
-/* ===============================
-   FONT FACE DEFINITIONS
-================================ */
-
 @font-face {
   font-family: "Inter";
   src: url("../assets/fonts/Inter-Regular.woff2") format("woff2");
@@ -34,10 +30,6 @@
   font-display: swap;
 }
 
-/* ===============================
-   CSS VARIABLES
-================================ */
-
 :root {
   /* Colors */
   --color-black: #000000;
@@ -66,16 +58,16 @@
   --transition-base: 0.35s ease;
 }
 
-/* ===============================
-   RESET
-================================ */
-
 *,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
 }
 
 html {
@@ -95,10 +87,6 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
-
-/* ===============================
-   GLOBAL ELEMENTS
-================================ */
 
 img {
   max-width: 100%;
@@ -122,10 +110,6 @@ ol {
   list-style: none;
 }
 
-/* ===============================
-   UTILITIES
-================================ */
-
 .container {
   max-width: var(--container-max-width);
   margin: 0 auto;
@@ -142,4 +126,25 @@ ol {
 
 .text-center {
   text-align: center;
+}
+
+a,
+button,
+input,
+textarea,
+select {
+  outline: none;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #ff6a2b;
+  outline-offset: 2px;
+}
+
+[role="button"],
+.card,
+.clickable {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
 }
