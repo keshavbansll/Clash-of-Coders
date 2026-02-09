@@ -1,300 +1,779 @@
-/* ============================= */
-/* MOBILE PHONES (≤ 480px)       */
-/* ============================= */
+/* ===============================
+   MOBILE-FIRST RESPONSIVE DESIGN
+   Base styles are mobile, then scale up
+================================ */
 
-@media (max-width: 480px) {
-  /* NAVBAR */
+/* ===============================
+   GLOBAL MOBILE FIXES
+================================ */
+
+* {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden !important;
+  width: 100%;
+  position: relative;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ===============================
+   MOBILE BASE (< 768px)
+================================ */
+
+@media (max-width: 767px) {
+  /* PREVENT ALL OVERFLOW */
+  body,
+  .hero,
+  .section-panel,
+  .participation-panel,
+  .participation-grid,
+  .participation-card {
+    overflow-x: hidden !important;
+  }
+
+  /* GLOBAL SECTION PADDING */
+  .section-panel {
+    padding: 48px 1rem !important;
+    margin: 0 0.5rem !important;
+    border-radius: 12px;
+    width: calc(100% - 1rem) !important;
+    max-width: 100% !important;
+  }
+
+  .section-inner,
+  .container {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* NAVBAR - HIDE ON MOBILE */
   .navbar {
-    padding: 16px 5vw;
+    display: none !important;
   }
 
-  .navbar-links {
-    display: none;
+  /* ========== HERO SECTION - CENTERED ========== */
+  .hero {
+    min-height: auto;
+    padding: 100px 1rem 60px !important;
+    text-align: center !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
+  .hero-content {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+    padding: 0 0.5rem;
+  }
+
+  .hero h1 {
+    font-size: 36px !important;
+    line-height: 1.1 !important;
+    letter-spacing: -0.01em !important;
+    text-align: center !important;
+    width: 100%;
+  }
+
+  .hero h2 {
+    font-size: 13px !important;
+    margin-top: 12px !important;
+    letter-spacing: 0.06em !important;
+    text-align: center !important;
+    width: 100%;
+  }
+
+  .hero-countdown {
+    font-size: 13px !important;
+    margin-top: 20px !important;
+    text-align: center !important;
+    width: 100%;
+  }
+
+  .hero-countdown span {
+    display: block !important;
+    margin-top: 8px !important;
+    margin-left: 0 !important;
+    font-size: 15px !important;
+    text-align: center !important;
+  }
+
+  .hero-cta {
+    margin-top: 32px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100%;
+  }
+
+  .hero-visual {
+    display: none !important;
+  }
+
+  /* SECTION HEADINGS */
+  .section-heading {
+    font-size: 20px !important;
+    margin-bottom: 32px !important;
+    letter-spacing: 0.06em !important;
+    text-align: center !important;
+  }
+
+  h3 {
+    font-size: 22px !important;
+    text-align: center !important;
+  }
+
+  .section-title {
+    font-size: 22px !important;
+    margin-bottom: 28px !important;
+    text-align: center !important;
+  }
+
+  /* BUTTONS */
   .btn-register {
-    padding: 10px 20px;
-    font-size: 12px;
+    padding: 10px 24px !important;
+    font-size: 12px !important;
+    letter-spacing: 0.03em !important;
+  }
+
+  .btn-primary {
+    padding: 10px 20px !important;
+    font-size: 12px !important;
+  }
+
+  .btn-outline {
+    padding: 10px 20px !important;
+    font-size: 13px !important;
+  }
+
+  /* ABOUT SECTION */
+  .about-section {
+    padding: 40px 0 !important;
+  }
+
+  .about-section .section-panel {
+    width: calc(100% - 1rem) !important;
+  }
+
+  .about-section p {
+    font-size: 14px !important;
+    line-height: 1.7 !important;
+    text-align: left !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* ========== PARTICIPATION SECTION - VERTICAL STACK ========== */
+  .participation-section {
+    width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  .participation-panel {
+    padding: 48px 1rem !important;
+    margin: 0 0.5rem !important;
+    width: calc(100% - 1rem) !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  .participation-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    grid-template-columns: none !important;
+    gap: 20px !important;
+    margin-top: 32px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .participation-card {
+    padding: 28px 20px !important;
+    text-align: center !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .participation-card h4 {
+    font-size: 16px !important;
+    margin-top: 16px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .participation-card p {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+  }
+
+  .icon-circle {
+    width: 60px !important;
+    height: 60px !important;
+    margin: 0 auto !important;
+  }
+
+  .icon-circle img {
+    width: 28px !important;
+    height: 28px !important;
+  }
+
+  /* JOURNEY SECTION */
+  .journey-panel {
+    padding: 48px 1rem !important;
+    margin: 0 0.5rem !important;
+    width: calc(100% - 1rem) !important;
+  }
+
+  .journey-layout {
+    display: flex !important;
+    flex-direction: column !important;
+    grid-template-columns: none !important;
+    gap: 32px !important;
+  }
+
+  .journey-intro {
+    text-align: center !important;
+  }
+
+  .journey-intro h3 {
+    font-size: 20px !important;
+    margin-bottom: 16px !important;
+  }
+
+  .journey-intro p {
+    max-width: 100% !important;
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    text-align: center !important;
+  }
+
+  .journey-rows {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 28px !important;
+  }
+
+  .journey-row {
+    display: grid !important;
+    grid-template-columns: 36px 1fr !important;
+    gap: 12px !important;
+    align-items: start !important;
+  }
+
+  .journey-connector {
+    display: none !important;
+  }
+
+  .journey-number {
+    width: 36px !important;
+    height: 36px !important;
+    font-size: 13px !important;
+  }
+
+  .journey-card {
+    padding: 20px 18px !important;
+    border-radius: 10px !important;
+    width: 100% !important;
+  }
+
+  .journey-card h4 {
+    font-size: 16px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .journey-card p {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+  }
+
+  /* PRIZES SECTION */
+  .prizes-panel {
+    padding: 48px 1rem !important;
+    margin: 0 0.5rem !important;
+    width: calc(100% - 1rem) !important;
+  }
+
+  .prize-pool {
+    flex-direction: row !important;
+    gap: 12px !important;
+    margin-bottom: 40px !important;
+    justify-content: center !important;
+  }
+
+  .prize-pool .trophy {
+    font-size: 24px !important;
+  }
+
+  .prize-pool .amount {
+    font-size: 32px !important;
+  }
+
+  .prizes-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    grid-template-columns: none !important;
+    gap: 20px !important;
+  }
+
+  .prize-card {
+    padding: 24px 18px !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .prize-card h4 {
+    font-size: 16px !important;
+    margin-bottom: 12px !important;
+  }
+
+  .prize-card p {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+  }
+
+  /* THEMES SECTION */
+  .themes-panel {
+    padding: 48px 1rem !important;
+    margin: 0 0.5rem !important;
+    width: calc(100% - 1rem) !important;
+  }
+
+  .themes-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    grid-template-columns: none !important;
+    gap: 18px !important;
+    margin-top: 32px !important;
+  }
+
+  .theme-card {
+    padding: 24px 18px !important;
+    width: 100% !important;
+  }
+
+  .theme-icon {
+    font-size: 28px !important;
+    margin-bottom: 12px !important;
+  }
+
+  .theme-card h4 {
+    font-size: 14px !important;
+    line-height: 1.4 !important;
+  }
+
+  .theme-hover span {
+    font-size: 14px !important;
+  }
+
+  /* THEME MODAL */
+  .theme-modal-content {
+    width: 90% !important;
+    max-width: 90vw !important;
+    padding: 28px 20px !important;
+    margin: 0 1rem !important;
+  }
+
+  .theme-modal-content h4 {
+    font-size: 18px !important;
+    margin-bottom: 12px !important;
+  }
+
+  .theme-modal-content p {
+    font-size: 14px !important;
+  }
+
+  /* VENUE SECTION */
+  .venue-section {
+    width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  .venue-panel {
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+  }
+
+  .venue-inner {
+    width: 100% !important;
+    padding: 0 0.5rem !important;
+  }
+
+  .venue-content {
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 20px 1rem !important;
+    gap: 16px !important;
+    text-align: center !important;
+    border-radius: 10px !important;
+    width: 100% !important;
+  }
+
+  .venue-text {
+    font-size: 14px !important;
+    font-weight: 600 !important;
+  }
+
+  .venue-map-btn {
+    padding: 10px 16px !important;
+    font-size: 13px !important;
+  }
+
+  /* TIMELINE SECTION */
+  .timeline-panel {
+    padding: 48px 1rem !important;
+    margin: 0 0.5rem !important;
+    width: calc(100% - 1rem) !important;
+  }
+
+  .timeline-list {
+    margin-top: 32px !important;
+    gap: 16px !important;
+    width: 100% !important;
+  }
+
+  .timeline-row {
+    display: grid !important;
+    grid-template-columns: 20px 1fr !important;
+    padding: 14px 16px !important;
+    gap: 12px !important;
+    row-gap: 8px !important;
+    width: 100% !important;
+  }
+
+  .timeline-icon {
+    font-size: 14px !important;
+  }
+
+  .timeline-date {
+    font-size: 12px !important;
+    grid-column: 2 !important;
+  }
+
+  .timeline-title {
+    font-size: 13px !important;
+    grid-column: 2 !important;
+    font-weight: 400 !important;
+  }
+
+  /* FAQ SECTION */
+  .faq-section {
+    padding: 48px 1rem !important;
+    width: 100% !important;
+  }
+
+  .faq-list {
+    padding: 0 0.5rem !important;
+    width: 100% !important;
+  }
+
+  .faq-question {
+    padding: 16px 0 !important;
+  }
+
+  .faq-question span {
+    font-size: 14px !important;
+    line-height: 1.4 !important;
+    padding-right: 12px !important;
+  }
+
+  .faq-toggle {
+    width: 28px !important;
+    height: 28px !important;
+    font-size: 16px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .faq-answer p {
+    font-size: 13px !important;
+    line-height: 1.6 !important;
+    padding-bottom: 16px !important;
+  }
+
+  /* CONTACT SECTION */
+  .contact-section {
+    padding: 48px 1rem 40px !important;
+    width: 100% !important;
+  }
+
+  .contact-box {
+    padding: 32px 1rem !important;
+    border-radius: 10px !important;
+    margin: 0 0.5rem !important;
+    width: calc(100% - 1rem) !important;
+  }
+
+  .contact-text {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    margin-bottom: 28px !important;
+  }
+
+  .contact-row {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+  }
+
+  .contact-item {
+    font-size: 15px !important;
+    gap: 12px !important;
+  }
+
+  .contact-icon {
+    width: 38px !important;
+    height: 38px !important;
+    font-size: 16px !important;
+  }
+
+  /* FOOTER */
+  .site-footer {
+    padding: 40px 1rem 32px !important;
+  }
+
+  .footer-socials {
+    gap: 24px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .footer-socials a {
+    width: 44px !important;
+    height: 44px !important;
+    font-size: 18px !important;
+  }
+
+  .footer-copy {
+    font-size: 11px !important;
+    line-height: 1.5 !important;
+    padding: 0 1rem !important;
+  }
+
+  /* CARDS GLOBAL */
+  .info-card,
+  .prize-card,
+  .theme-card,
+  .campus-card {
+    padding: 20px 16px !important;
+    width: 100% !important;
+  }
+
+  /* GRID OVERRIDE - FORCE VERTICAL */
+  .card-grid,
+  .prize-grid,
+  .themes-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+}
+
+/* ===============================
+   SMALL MOBILE (< 480px)
+================================ */
+
+@media (max-width: 479px) {
+  .hero h1 {
+    font-size: 32px !important;
+  }
+
+  .section-heading {
+    font-size: 18px !important;
+  }
+
+  .prize-pool .amount {
+    font-size: 28px !important;
+  }
+
+  .contact-item {
+    font-size: 13px !important;
+  }
+
+  .contact-item span:last-child {
+    word-break: break-word !important;
+  }
+
+  .section-panel {
+    margin: 0 0.25rem !important;
+    width: calc(100% - 0.5rem) !important;
+  }
+}
+
+/* ===============================
+   TABLETS (768px - 1024px)
+================================ */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* GLOBAL PADDING */
+  .section-panel {
+    padding: 64px 2rem !important;
+  }
+
+  .section-inner,
+  .container {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
   }
 
   /* HERO */
   .hero {
-    min-height: auto;
-    padding-top: 90px;
-    padding-bottom: 70px;
+    padding-top: 140px !important;
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
   }
 
   .hero h1 {
-    font-size: 36px;
-    letter-spacing: 1px;
+    font-size: 56px !important;
   }
 
-  .hero-subtitle {
-    font-size: 14px;
-    margin-top: 10px;
+  .hero h2 {
+    font-size: 16px !important;
   }
 
-  .hero .countdown {
-    font-size: 13px;
-    margin: 18px 0 28px;
+  /* GRIDS */
+  .participation-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 24px !important;
   }
 
-  .hero .btn-register {
-    margin-top: 20px;
+  .prizes-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 24px !important;
   }
 
-  /* ABOUT / GENERIC SECTIONS */
-  section {
-    padding-top: 70px;
-    padding-bottom: 70px;
+  .themes-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 24px !important;
   }
 
-  .section-title {
-    font-size: 22px;
-    margin-bottom: 24px;
+  /* JOURNEY */
+  .journey-layout {
+    grid-template-columns: 1fr !important;
+    gap: 48px !important;
   }
 
-  /* CARDS (WHO CAN PARTICIPATE, PRIZES, THEMES) */
-  .cards-grid,
-  .themes-grid,
-  .prize-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 24px;
+  .journey-intro {
+    text-align: center !important;
   }
 
-  .card {
-    padding: 28px 22px;
+  .journey-intro p {
+    max-width: 600px !important;
+    margin: 0 auto !important;
   }
 
-  /* JOURNEY / TIMELINE */
-  .journey-wrapper {
-    grid-template-columns: 1fr;
-    gap: 36px;
-  }
-
-  .journey-steps {
-    padding-left: 0;
-  }
-
-  /* TIMELINE ITEMS */
-  .timeline-item {
-    padding: 16px 18px;
-    font-size: 14px;
-  }
-
-  /* FAQ */
-  .faq-item {
-    padding: 16px 0;
-  }
-
-  .faq-question {
-    font-size: 14px;
-  }
-
-  .faq-toggle {
-    width: 32px;
-    height: 32px;
-    font-size: 14px;
+  .journey-connector {
+    display: block !important;
   }
 
   /* CONTACT */
   .contact-box {
-    padding: 36px 22px;
+    padding: 40px 2rem !important;
   }
 
-  .contact-row {
-    flex-direction: column;
-    gap: 22px;
-  }
-
-  /* FOOTER */
-  .footer-socials {
-    gap: 28px;
-  }
-
-  .footer-copy {
-    font-size: 12px;
+  /* VENUE */
+  .venue-content {
+    padding: 20px 2rem !important;
   }
 }
 
-/* ============================= */
-/* LARGE PHONES / SMALL TABLETS  */
-/* ============================= */
+/* ===============================
+   MEDIUM TABLETS (600px - 767px)
+================================ */
 
-@media (min-width: 481px) and (max-width: 768px) {
-  section {
-    padding-left: 7vw;
-    padding-right: 7vw;
-  }
-
-  /* HERO */
-  .hero h1 {
-    font-size: 44px;
-  }
-
-  .hero-subtitle {
-    font-size: 15px;
-  }
-
-  /* GRIDS */
-  .cards-grid,
-  .themes-grid,
-  .prize-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 28px;
-  }
-
-  /* JOURNEY */
-  .journey-wrapper {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  /* CONTACT */
-  .contact-row {
-    gap: 40px;
-  }
-}
-
-/* ============================= */
-/* TABLETS / SMALL LAPTOPS       */
-/* ============================= */
-
-@media (min-width: 769px) and (max-width: 1024px) {
-  section {
-    padding-left: 8vw;
-    padding-right: 8vw;
-  }
-
-  /* HERO */
-  .hero h1 {
-    font-size: 54px;
-  }
-
-  /* GRIDS */
-  .themes-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .prize-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  /* JOURNEY */
-  .journey-wrapper {
-    grid-template-columns: 1fr 1.3fr;
-  }
-}
-
-/* ============================= */
-/* STANDARD DESKTOPS             */
-/* ============================= */
-
-@media (min-width: 1025px) and (max-width: 1440px) {
-  .hero h1 {
-    font-size: 64px;
-  }
-}
-
-/* ============================= */
-/* LARGE DISPLAYS                */
-/* ============================= */
-
-@media (min-width: 1441px) {
-  .hero {
-    max-width: 1600px;
-    margin: 0 auto;
-  }
-}
-
-@media (max-width: 768px) {
-  .navbar {
-    display: none !important;
-  }
-}
-
-@media (max-width: 768px) {
-  .participation-section {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
-
+@media (min-width: 600px) and (max-width: 767px) {
   .participation-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 24px;
-    margin-top: 36px;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
   }
 
-  .participation-card {
-    padding: 26px 22px;
-    border-radius: 14px;
-    text-align: center;
+  .prizes-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
   }
 
-  .participation-card .icon {
-    width: 54px;
-    height: 54px;
-    margin-bottom: 16px;
-  }
-
-  .participation-card h3 {
-    font-size: 16px;
-    margin-bottom: 10px;
-  }
-
-  .participation-card p {
-    font-size: 14px;
-    line-height: 1.6;
-  }
-}
-
-@media (max-width: 768px) {
-  .journey-step-number,
-  .journey-line {
-    display: none !important;
-  }
-
-  .journey-steps {
-    padding-left: 0;
-  }
-
-  .journey-card {
-    margin-bottom: 24px;
-    padding: 24px 22px;
-  }
-
-  .journey-card h4 {
-    font-size: 16px;
-    margin-bottom: 8px;
-  }
-
-  .journey-card p {
-    font-size: 14px;
-    line-height: 1.6;
-  }
-}
-
-@media (max-width: 768px) {
-  .hero {
-    padding-top: 80px;
-    padding-bottom: 70px;
-    min-height: auto;
+  .themes-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
   }
 
   .hero h1 {
-    font-size: 38px;
-    line-height: 1.15;
+    font-size: 44px !important;
   }
 
-  .hero-subtitle {
-    font-size: 14px;
-    margin-top: 8px;
+  .section-heading {
+    font-size: 24px !important;
+  }
+}
+
+/* ===============================
+   LANDSCAPE MOBILE (orientation)
+================================ */
+
+@media (max-width: 767px) and (orientation: landscape) {
+  .hero {
+    padding-top: 80px !important;
+    padding-bottom: 40px !important;
   }
 
-  .hero .countdown {
-    font-size: 13px;
-    margin: 18px 0 26px;
+  .hero h1 {
+    font-size: 32px !important;
+  }
+}
+
+/* ===============================
+   PREVENT HORIZONTAL SCROLL - CRITICAL
+================================ */
+
+@media (max-width: 1024px) {
+  body {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+  }
+
+  * {
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  .section-panel::before,
+  .section-panel::after,
+  .prizes-panel::before,
+  .prizes-panel::after,
+  .themes-panel::before,
+  .themes-panel::after {
+    display: none !important;
+  }
+}
+
+/* ===============================
+   UTILITY CLASSES FOR MOBILE
+================================ */
+
+@media (max-width: 767px) {
+  .hide-mobile {
+    display: none !important;
+  }
+
+  .text-center-mobile {
+    text-align: center !important;
+  }
+
+  .full-width-mobile {
+    width: 100% !important;
   }
 }
