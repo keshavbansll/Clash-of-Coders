@@ -1,0 +1,107 @@
+/* ===============================
+   GLOBAL TRANSITIONS
+================================ */
+
+a,
+button,
+.info-card,
+.prize-card,
+.theme-card,
+.campus-card,
+.journey-steps li {
+  transition:
+    transform var(--transition-base),
+    box-shadow var(--transition-base),
+    border-color var(--transition-base);
+}
+
+/* ===============================
+   CARD HOVER EFFECTS
+================================ */
+
+.info-card:hover,
+.prize-card:hover,
+.theme-card:hover,
+.campus-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--color-primary);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* ===============================
+   NAV LINKS
+================================ */
+
+.nav-links a {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-primary);
+  transition: width var(--transition-base);
+}
+
+.nav-links a:hover {
+  color: var(--color-white);
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* ===============================
+   HERO CTA
+================================ */
+
+.hero-cta .btn-outline {
+  will-change: transform;
+}
+
+.hero-cta .btn-outline:hover {
+  transform: scale(1.04);
+}
+
+/* ===============================
+   SCROLL ANIMATION PREP
+================================ */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+/* ===============================
+   FAQ INTERACTION PREP
+================================ */
+
+.faq-item {
+  cursor: pointer;
+}
+
+.faq-item p {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transition-base);
+}
+
+.faq-item.active p {
+  max-height: 200px;
+}

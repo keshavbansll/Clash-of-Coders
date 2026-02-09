@@ -1,0 +1,300 @@
+/* ============================= */
+/* MOBILE PHONES (≤ 480px)       */
+/* ============================= */
+
+@media (max-width: 480px) {
+  /* NAVBAR */
+  .navbar {
+    padding: 16px 5vw;
+  }
+
+  .navbar-links {
+    display: none;
+  }
+
+  .btn-register {
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+
+  /* HERO */
+  .hero {
+    min-height: auto;
+    padding-top: 90px;
+    padding-bottom: 70px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+    letter-spacing: 1px;
+  }
+
+  .hero-subtitle {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+
+  .hero .countdown {
+    font-size: 13px;
+    margin: 18px 0 28px;
+  }
+
+  .hero .btn-register {
+    margin-top: 20px;
+  }
+
+  /* ABOUT / GENERIC SECTIONS */
+  section {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .section-title {
+    font-size: 22px;
+    margin-bottom: 24px;
+  }
+
+  /* CARDS (WHO CAN PARTICIPATE, PRIZES, THEMES) */
+  .cards-grid,
+  .themes-grid,
+  .prize-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .card {
+    padding: 28px 22px;
+  }
+
+  /* JOURNEY / TIMELINE */
+  .journey-wrapper {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .journey-steps {
+    padding-left: 0;
+  }
+
+  /* TIMELINE ITEMS */
+  .timeline-item {
+    padding: 16px 18px;
+    font-size: 14px;
+  }
+
+  /* FAQ */
+  .faq-item {
+    padding: 16px 0;
+  }
+
+  .faq-question {
+    font-size: 14px;
+  }
+
+  .faq-toggle {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+
+  /* CONTACT */
+  .contact-box {
+    padding: 36px 22px;
+  }
+
+  .contact-row {
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  /* FOOTER */
+  .footer-socials {
+    gap: 28px;
+  }
+
+  .footer-copy {
+    font-size: 12px;
+  }
+}
+
+/* ============================= */
+/* LARGE PHONES / SMALL TABLETS  */
+/* ============================= */
+
+@media (min-width: 481px) and (max-width: 768px) {
+  section {
+    padding-left: 7vw;
+    padding-right: 7vw;
+  }
+
+  /* HERO */
+  .hero h1 {
+    font-size: 44px;
+  }
+
+  .hero-subtitle {
+    font-size: 15px;
+  }
+
+  /* GRIDS */
+  .cards-grid,
+  .themes-grid,
+  .prize-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+  }
+
+  /* JOURNEY */
+  .journey-wrapper {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  /* CONTACT */
+  .contact-row {
+    gap: 40px;
+  }
+}
+
+/* ============================= */
+/* TABLETS / SMALL LAPTOPS       */
+/* ============================= */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  section {
+    padding-left: 8vw;
+    padding-right: 8vw;
+  }
+
+  /* HERO */
+  .hero h1 {
+    font-size: 54px;
+  }
+
+  /* GRIDS */
+  .themes-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .prize-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* JOURNEY */
+  .journey-wrapper {
+    grid-template-columns: 1fr 1.3fr;
+  }
+}
+
+/* ============================= */
+/* STANDARD DESKTOPS             */
+/* ============================= */
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .hero h1 {
+    font-size: 64px;
+  }
+}
+
+/* ============================= */
+/* LARGE DISPLAYS                */
+/* ============================= */
+
+@media (min-width: 1441px) {
+  .hero {
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .participation-section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .participation-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-top: 36px;
+  }
+
+  .participation-card {
+    padding: 26px 22px;
+    border-radius: 14px;
+    text-align: center;
+  }
+
+  .participation-card .icon {
+    width: 54px;
+    height: 54px;
+    margin-bottom: 16px;
+  }
+
+  .participation-card h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .participation-card p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 768px) {
+  .journey-step-number,
+  .journey-line {
+    display: none !important;
+  }
+
+  .journey-steps {
+    padding-left: 0;
+  }
+
+  .journey-card {
+    margin-bottom: 24px;
+    padding: 24px 22px;
+  }
+
+  .journey-card h4 {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  .journey-card p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 80px;
+    padding-bottom: 70px;
+    min-height: auto;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+    line-height: 1.15;
+  }
+
+  .hero-subtitle {
+    font-size: 14px;
+    margin-top: 8px;
+  }
+
+  .hero .countdown {
+    font-size: 13px;
+    margin: 18px 0 26px;
+  }
+}

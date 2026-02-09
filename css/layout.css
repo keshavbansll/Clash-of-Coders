@@ -1,0 +1,319 @@
+/* ===============================
+   GLOBAL LAYOUT
+================================ */
+
+header,
+section,
+footer {
+  width: 100%;
+}
+
+.section-inner {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--section-padding-x);
+}
+
+.section-panel {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 96px 80px;
+  background:
+    radial-gradient(
+      1200px 500px at 50% -200px,
+      rgba(255, 95, 46, 0.08),
+      transparent 60%
+    ),
+    linear-gradient(180deg, #0e0e0e 0%, #0a0a0a 100%);
+  border-radius: 20px;
+}
+
+/* ===============================
+   NAVBAR
+================================ */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 84px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.nav-container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--section-padding-x);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+/* ===============================
+   HERO
+================================ */
+
+/* LEFT TRANSPARENT IMAGE */
+.hero-visual {
+  position: absolute;
+  left: 10%;
+  top: 60%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-visual img {
+  width: 520px;
+  max-width: 40vw;
+  height: auto;
+  opacity: 0.8;
+
+  /* soft blend into background */
+  filter: blur(0.2px);
+}
+
+/* Ensure text stays above */
+.hero *:not(.hero-visual) {
+  position: relative;
+  z-index: 1;
+}
+
+/* Mobile safety */
+@media (max-width: 900px) {
+  .hero-visual {
+    display: none;
+  }
+}
+
+.hero {
+  min-height: 60vh;
+  display: flex;
+  align-items: flex-start;
+  padding-top: 180px;
+  padding-bottom: 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  max-width: 720px;
+  margin-left: auto;
+  text-align: left;
+}
+
+.hero h1 {
+  font-size: clamp(52px, 6vw, 84px);
+  font-weight: 600;
+  line-height: 1.02;
+  letter-spacing: -0.01em;
+}
+
+.hero h2 {
+  margin-top: 20px;
+  font-size: 18px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.hero-cta {
+  margin-top: 48px;
+  display: flex;
+  justify-content: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    800px 600px at 20% 40%,
+    rgba(255, 95, 46, 0.18),
+    transparent 60%
+  );
+  pointer-events: none;
+}
+
+/* ===============================
+   COUNTDOWN BANNER
+================================ */
+
+.countdown-banner {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* ===============================
+   ABOUT
+================================ */
+
+.about-section {
+  padding: var(--section-padding-y) 0;
+  text-align: center;
+}
+
+.about-section p {
+  max-width: 920px;
+  margin: 24px auto 0;
+  text-align: justify;
+}
+
+/* ===============================
+   PARTICIPATION
+================================ */
+
+.participation-section {
+  padding: var(--section-padding-y) 0;
+}
+
+.card-grid {
+  margin-top: 64px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* ===============================
+   JOURNEY
+================================ */
+
+.journey-section {
+  padding: var(--section-padding-y) 0;
+  text-align: center;
+}
+
+.journey-steps {
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+/* ===============================
+   PRIZES
+================================ */
+
+.prizes-section {
+  padding: var(--section-padding-y) 0;
+  text-align: center;
+}
+
+.prize-grid {
+  margin-top: 64px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* ===============================
+   THEMES
+================================ */
+
+.themes-section {
+  padding: var(--section-padding-y) 0;
+}
+
+.themes-grid {
+  margin-top: 56px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+/* ===============================
+   CAMPUS DAYS
+================================ */
+
+.campus-days-section {
+  padding: var(--section-padding-y) 0;
+  text-align: center;
+}
+
+.campus-cards {
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+/* ===============================
+   CITIES
+================================ */
+
+.cities-section {
+  padding: var(--section-padding-y) 0;
+  text-align: center;
+}
+
+/* ===============================
+   TIMELINE
+================================ */
+
+.timeline-section {
+  padding: var(--section-padding-y) 0;
+}
+
+.timeline-list {
+  margin-top: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ===============================
+   FAQ
+================================ */
+
+.faq-section {
+  padding: var(--section-padding-y) 0;
+}
+
+.faq-item {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ===============================
+   FOOTER
+================================ */
+
+.footer {
+  padding: 64px var(--section-padding-x);
+  text-align: center;
+}
+
+/* ===============================
+   EXTRAS
+================================ */
+
+.participation-section h3,
+.journey-section h3,
+.prizes-section h3 {
+  text-align: left;
+}
+
+.section-panel {
+  text-align: left;
+}
+
+.nav-container {
+  padding-left: 64px;
+  padding-right: 64px;
+}
