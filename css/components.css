@@ -1154,3 +1154,15 @@ p {
 .btn-register:hover {
   color: #000000;
 }
+
+/* FAQ Styles */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 500px; /* Adjust based on your content */
+  padding-top: 1rem;
+}
