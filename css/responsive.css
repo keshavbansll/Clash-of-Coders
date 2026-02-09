@@ -170,7 +170,7 @@ img {
   .about-section p {
     font-size: 14px !important;
     line-height: 1.7 !important;
-    text-align: left !important;
+    text-align: justify !important;
     padding: 0 !important;
     margin: 0 !important;
   }
