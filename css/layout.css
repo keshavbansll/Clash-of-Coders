@@ -112,7 +112,7 @@ footer {
 .hero-content {
   max-width: 720px;
   margin-left: auto;
-  text-align: left;
+  text-align: center;
 }
 
 .hero h1 {
@@ -120,7 +120,7 @@ footer {
   font-weight: 600;
   line-height: 1.02;
   letter-spacing: -0.01em;
-   padding: 0.5em;
+   padding: 0.1em;
 }
 
 .hero h2 {
