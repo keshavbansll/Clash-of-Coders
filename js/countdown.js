@@ -4,7 +4,7 @@
 
 // TODO: Update this date when registration deadline is finalized
 // Format: YYYY-MM-DDTHH:MM:SS
-const REGISTRATION_DEADLINE = new Date("2026-02-16T23:59:59").getTime();
+const REGISTRATION_DEADLINE = new Date("2026-02-17T23:59:59").getTime();
 
 const countdownElement = document.getElementById("countdown-timer");
 
